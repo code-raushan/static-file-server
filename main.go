@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"os"
+
+	"github.com/code-raushan/static-file-server/cmd/server"
+)
 
 func main(){
-	fmt.Println("Static File Server implementation")
+	os.Exit(server.Main())
 }

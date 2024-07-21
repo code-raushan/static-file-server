@@ -50,6 +50,8 @@ func Main() int {
 		return 1
 	}
 
+	fmt.Fprintf(os.Stdout, "Server is running on %s", addr)
+
 	if err := srv.Serve(listener); err != nil {
 		return 1
 	}
