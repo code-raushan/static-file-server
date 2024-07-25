@@ -9,7 +9,6 @@ import (
 )
 
 func Main() int {
-
 	flags := flag.NewFlagSet(os.Args[0], flag.ExitOnError)
 	
 	hostFlag := flags.String("host", "localhost", "specific host for the server to listen on (default is localhost)")
@@ -50,7 +49,7 @@ func Main() int {
 		return 1
 	}
 
-	fmt.Fprintf(os.Stdout, "Server is running on %s", addr)
+	fmt.Fprintf(os.Stdout, "Server is running on %s serving %s", addr, rootDir)
 
 	if err := srv.Serve(listener); err != nil {
 		return 1
